@@ -150,7 +150,6 @@ function handleIce(data) {
 }
 
 function handleAddStream(data) {
-    console.log("got and stream from my peer");
-    console.log("Peer's Stream", data.stream);
-    console.log("My stream", myStream);
+    const peerFace = document.getElementById("peerFace");
+    peerFace.srcObject = data.stream;
 }
